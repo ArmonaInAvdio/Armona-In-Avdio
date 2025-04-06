@@ -1,0 +1,37 @@
+/* Set a background color */
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+}
+
+/* Style the header */
+h1 {
+    color: #333;
+    text-align: center;
+    padding: 20px;
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Style the links */
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #0056b3;
+}
+
+/* Style the text */
+p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+body {
+    background-image: url('your-image.jpg');
+    background-size: cover;
+    background-position: center;
+}
