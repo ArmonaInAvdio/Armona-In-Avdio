@@ -1,97 +1,77 @@
-/* Reset some default styles */
-* {
+/* General body styles */
+body {
+    font-family: 'Arial', sans-serif; /* Setting a clean, modern font */
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-/* Set the background for the whole page */
-body {
-    background-color: #1e1e1e; /* Dark background */
-    color: white; /* White text for contrast */
-    font-family: 'Arial', sans-serif; /* Font similar to Minecraft */
+    background-image: url('https://preview.redd.it/kpihzidzce941.jpg?auto=webp&s=49b529606cd92d7063a5a457232c3fcf492895fa');
+    background-size: cover; /* Cover the whole background */
+    background-position: center; /* Center the image */
+    color: #ffffff; /* White text */
+    text-align: center; /* Center align all the text */
     line-height: 1.6;
 }
 
-/* Style for the header */
+/* Add some margin to the header and center the title */
 h1 {
-    text-align: center;
+    font-size: 3em;
     margin-top: 50px;
-    font-size: 3rem;
-    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Subtle shadow for better readability */
-    font-family: 'Minecraft', sans-serif; /* Custom font */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Shadow effect for better visibility */
 }
 
-/* Style for the paragraph */
+/* Style the paragraphs */
 p {
-    text-align: center;
+    font-size: 1.2em;
     margin-top: 20px;
-    font-size: 1.2rem;
-    line-height: 1.8;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 10px;
-    font-family: 'Minecraft', sans-serif;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
 }
 
-/* Style for the form container */
-h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-top: 50px;
-}
-
-/* Style the form input fields */
+/* Style the form and inputs */
 form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 30px;
+    background-color: rgba(0, 0, 0, 0.5); /* Transparent background for the form */
+    padding: 20px;
+    border-radius: 10px;
+    display: inline-block;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-input[type="text"],
-textarea {
+label {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Style the text inputs and textarea */
+input[type="text"], textarea {
     width: 80%;
-    max-width: 600px;
     padding: 10px;
     margin: 10px 0;
-    border: 2px solid #333;
-    background-color: #2c2c2c;
-    color: white;
-    font-size: 1rem;
+    border: none;
     border-radius: 5px;
-    font-family: 'Minecraft', sans-serif;
+    font-size: 1em;
 }
 
+textarea {
+    resize: vertical; /* Allow vertical resizing */
+}
+
+/* Style the submit button */
 input[type="submit"] {
-    width: 50%;
-    background-color: #4CAF50; /* Minecraft greenish color */
+    background-color: #4CAF50; /* Green background */
     color: white;
-    padding: 10px;
-    margin-top: 10px;
-    font-size: 1.2rem;
+    padding: 15px 32px;
+    font-size: 1.2em;
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'Minecraft', sans-serif;
+    transition: background-color 0.3s ease; /* Smooth transition for hover */
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #45a049; /* Slightly darker green when hovered */
 }
 
-/* Add a footer with a small text */
-footer {
-    text-align: center;
-    font-size: 1rem;
-    color: #777;
-    margin-top: 50px;
-}
-
-/* Disqus comment section container */
+/* Disqus section styling */
 #disqus_thread {
     margin-top: 50px;
-    border-top: 3px solid #4CAF50;
-    padding-top: 20px;
 }
