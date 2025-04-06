@@ -1,6 +1,6 @@
 /* General body styles */
 body {
-    font-family: 'Arial', sans-serif; /* Setting a clean, modern font */
+    font-family: 'Arial', sans-serif; /* Clean, modern font */
     margin: 0;
     padding: 0;
     background-image: url('https://preview.redd.it/kpihzidzce941.jpg?auto=webp&s=49b529606cd92d7063a5a457232c3fcf492895fa');
@@ -28,31 +28,39 @@ p {
 
 /* Style the form and inputs */
 form {
-    background-color: rgba(0, 0, 0, 0.5); /* Transparent background for the form */
-    padding: 20px;
-    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background for form */
+    padding: 30px;
+    border-radius: 15px; /* Rounded corners for a softer look */
     display: inline-block;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.7);
+    max-width: 600px; /* Set a max width to prevent stretching */
+    width: 100%;
+    margin: 20px auto; /* Center the form */
 }
 
+/* Form labels */
 label {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    font-size: 1.3em;
+    margin-bottom: 15px;
     display: block;
+    color: #f0f0f0;
 }
 
 /* Style the text inputs and textarea */
 input[type="text"], textarea {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
+    width: 100%;
+    padding: 15px;
+    margin: 15px 0;
     border: none;
-    border-radius: 5px;
+    border-radius: 8px;
     font-size: 1em;
+    background-color: #333333;
+    color: #ffffff;
 }
 
+/* Allow vertical resizing of the textarea */
 textarea {
-    resize: vertical; /* Allow vertical resizing */
+    resize: vertical;
 }
 
 /* Style the submit button */
@@ -60,11 +68,12 @@ input[type="submit"] {
     background-color: #4CAF50; /* Green background */
     color: white;
     padding: 15px 32px;
-    font-size: 1.2em;
+    font-size: 1.5em; /* Larger text for the button */
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease; /* Smooth transition for hover */
+    margin-top: 20px;
 }
 
 input[type="submit"]:hover {
@@ -74,4 +83,22 @@ input[type="submit"]:hover {
 /* Disqus section styling */
 #disqus_thread {
     margin-top: 50px;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    font-size: 1.2em;
+}
+
+footer a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
