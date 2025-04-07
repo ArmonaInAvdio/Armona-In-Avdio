@@ -1,104 +1,83 @@
 /* General body styles */
 body {
-    font-family: 'Arial', sans-serif; /* Clean, modern font */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 0;
     padding: 0;
     background-image: url('https://preview.redd.it/kpihzidzce941.jpg?auto=webp&s=49b529606cd92d7063a5a457232c3fcf492895fa');
-    background-size: cover; /* Cover the whole background */
-    background-position: center; /* Center the image */
-    color: #ffffff; /* White text */
-    text-align: center; /* Center align all the text */
-    line-height: 1.6;
-}
-
-/* Add some margin to the header and center the title */
-h1 {
-    font-size: 3em;
-    margin-top: 50px;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Shadow effect for better visibility */
-}
-
-/* Style the paragraphs */
-p {
-    font-size: 1.2em;
-    margin-top: 20px;
-    margin-bottom: 30px;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
-}
-
-/* Style the form and inputs */
-form {
-    background-color: rgba(0, 0, 0, 0.7); /* Slightly darker background for form */
-    padding: 30px;
-    border-radius: 15px; /* Rounded corners for a softer look */
-    display: inline-block;
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.7);
-    max-width: 600px; /* Set a max width to prevent stretching */
-    width: 100%;
-    margin: 20px auto; /* Center the form */
-}
-
-/* Form labels */
-label {
-    font-size: 1.3em;
-    margin-bottom: 15px;
-    display: block;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     color: #f0f0f0;
 }
 
-/* Style the text inputs and textarea */
-input[type="text"], textarea {
-    width: 100%;
-    padding: 15px;
-    margin: 15px 0;
-    border: none;
-    border-radius: 8px;
-    font-size: 1em;
-    background-color: #333333;
-    color: #ffffff;
+/* Main content box on the left */
+.container {
+    max-width: 600px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 50px 0 50px 50px; /* pushes it from the top and left */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
 }
 
-/* Allow vertical resizing of the textarea */
+/* Header */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+    color: #00ffcc;
+}
+
+/* Paragraph intro text */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+/* Form styles */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 1.1em;
+    margin-bottom: 8px;
+    text-align: left;
+}
+
+input[type="text"],
 textarea {
-    resize: vertical;
-}
-
-/* Style the submit button */
-input[type="submit"] {
-    background-color: #4CAF50; /* Green background */
-    color: white;
-    padding: 15px 32px;
-    font-size: 1.5em; /* Larger text for the button */
+    padding: 10px;
     border: none;
     border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 1em;
+    background-color: #222;
+    color: #fff;
+    outline: none;
+}
+
+/* Submit button */
+input[type="submit"] {
+    background-color: #00cc99;
+    color: white;
+    font-size: 1.1em;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth transition for hover */
-    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049; /* Slightly darker green when hovered */
+    background-color: #009977;
 }
 
-/* Disqus section styling */
+/* Disqus thread style */
 #disqus_thread {
-    margin-top: 50px;
-}
-
-/* Footer styling */
-footer {
-    margin-top: 40px;
+    margin: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
     padding: 20px;
-    background-color: rgba(0, 0, 0, 0.8);
-    color: white;
-    font-size: 1.2em;
-}
-
-footer a {
-    color: #4CAF50;
-    text-decoration: none;
-}
-
-footer a:hover {
-    text-decoration: underline;
+    border-radius: 15px;
 }
