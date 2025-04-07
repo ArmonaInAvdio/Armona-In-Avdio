@@ -3,36 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First Game Website</title>
-    <!-- Link to the CSS file -->
+    <title>WHATEVER HAPPENS - Game Site</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Welcome to WHATEVER HAPPENS game site!</h1>
-    <p>BUSSINES BUSSINES, trying to sell a cebab for a living here !! :)</p>
-    
-    <!-- Add a form to submit ideas -->
-    <h2>Send Us Your Ideas!</h2>
-    <form action="#" method="post">
-        <label for="name">Your Name:</label>
-        <input type="text" id="name" name="name" required><br><br>
-        
-        <label for="message">Your Idea: (English)</label><br>
-        <textarea id="message" name="message" rows="4" cols="50" required></textarea><br><br>
-        
-        <input type="submit" value="Submit">
-    </form>
-    
-    <!-- Disqus Comments Section -->
+    <div class="container">
+        <h1>Welcome to WHATEVER HAPPENS game site!</h1>
+        <p>BUSSINES BUSSINES, trying to sell a cebab for a living here!! :)</p>
+
+        <!-- Form to submit ideas -->
+        <h2>Send Us Your Ideas!</h2>
+        <form action="your-email-or-script" method="post">
+            <label for="name">Your Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="message">Your Idea: (English)</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <!-- Disqus comments section -->
     <div id="disqus_thread"></div>
     <script>
-        (function() { // DON'T EDIT BELOW THIS LINE
+        (function () {
             var d = document, s = d.createElement('script');
             s.src = 'https://whatever-happens.disqus.com/embed.js';
             s.setAttribute('data-timestamp', +new Date());
             (d.head || d.body).appendChild(s);
         })();
     </script>
-    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <noscript>
+        Please enable JavaScript to view the
+        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
+    </noscript>
 </body>
 </html>
