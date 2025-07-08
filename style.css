@@ -48,16 +48,4 @@ main {
     padding: 20px;
     background: #ffffff;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    color: #35424a;
-    border-bottom: 2px solid #35424a;
-    padding-bottom: 10px;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns:
-
+    box-shadow: 0 0 10px
