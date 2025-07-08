@@ -8,102 +8,126 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #f0f8ff; /* Light background color */
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9; /* Light background */
         }
 
         header {
-            background: linear-gradient(135deg, #1e90ff, #4682b4); /* Gradient from light to dark blue */
-            padding: 20px;
+            background: linear-gradient(135deg, #2c3e50, #34495e); /* Gradient for header */
+            color: #ffffff;
+            padding: 20px 0;
             text-align: center;
-            border-radius: 10px; /* Optional: rounded corners */
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
 
-        h1 {
-            color: white; /* Text color */
-            font-family: 'Roboto', sans-serif; /* Font style */
-            font-size: 2.5em; /* Font size */
-            animation: colorChange 3s infinite alternate; /* Animation for color change */
+        header h1 {
+            margin: 0;
+            font-size: 2.5em; /* Larger title size */
+            animation: colorChange 3s infinite alternate; /* Animation for title */
         }
 
         @keyframes colorChange {
-            0% { color: #add8e6; } /* Light blue */
-            100% { color: #ffffff; } /* White */
-        }
-
-        .blue-text {
-            color: black; /* Črna barva */
+            0% { color: #90ee90; } /* Light green */
+            100% { color: #add8e6; } /* Light blue */
         }
 
         nav ul {
-            list-style-type: none; /* Remove bullet points */
-            padding: 0; /* Remove padding */
+            list-style: none;
+            padding: 0;
         }
 
         nav ul li {
-            display: inline; /* Display list items in a row */
-            margin: 0 15px; /* Space between items */
+            display: inline;
+            margin: 0 15px;
         }
 
         nav ul li a {
-            text-decoration: none; /* Remove underline from links */
-            color: white; /* Link color */
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s; /* Color transition */
+        }
+
+        nav ul li a:hover {
+            color: #1abc9c; /* Color on hover */
+        }
+
+        main {
+            padding: 20px;
+            background: #ffffff; /* White background */
+            border-radius: 8px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #34495e; /* Dark gray color */
+            border-bottom: 2px solid #1abc9c; /* Underline */
+            padding-bottom: 10px;
+            margin-bottom: 20px;
         }
 
         .product-grid {
-            display: flex; /* Use flexbox for product layout */
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible grid */
             gap: 20px; /* Space between products */
-            flex-wrap: wrap; /* Allow wrapping to next line */
         }
 
         .product {
-            border: 1px solid #ccc; /* Border around products */
-            border-radius: 5px; /* Rounded corners */
-            padding: 10px; /* Padding inside product */
-            text-align: center; /* Center text */
-            background-color: #fff; /* White background for products */
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s; /* Hover transition */
+            background-color: #fefefe; /* Light product background */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .product:hover {
+            transform: translateY(-5px); /* Slight lift on hover */
         }
 
         .product-image {
-            max-width: 100%; /* Responsive image */
-            height: auto; /* Maintain aspect ratio */
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
         }
 
         .price {
-            font-weight: bold; /* Bold price text */
+            font-size: 1.2em; /* Larger price size */
+            color: #e74c3c; /* Red color for price */
+            margin: 10px 0;
         }
+
+        button {
+            background-color: #1abc9c; /* Button color */
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1em;
+            transition: background-color 0.3s; /* Button color transition */
+        }
+
+        button:hover {
+            background-color: #16a085; /* Darker color on hover */
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: #2c3e50; /* Dark blue color */
+            color: #ffffff;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+    }
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>𝒜𝓇𝑜𝓂𝒶 𝒾𝓃 𝒜𝓋𝒹𝒾𝑜 Spletna Trgovina</h1>
-            <nav>
-                <ul>
-                    <li><a href="#about">O Nas</a></li>
-                    <li><a href="#products">Naši Izdelki</a></li>
-                    <li><a href="#contact">Kontaktirajte Nas</a></li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-
-    <main class="container">
-        <section id="about">
-            <h2>O Nas</h2>
-            <p>Dobrodošli v naši spletni trgovini! Ponujamo najnovejše tehnološke naprave in luksuzne dišave.</p>
-        </section>
-
-        <section id="products">
-            <h2>Naši Izdelki</h2>
-            <div class="product-grid">
-                <div class="product">
-                    <h3>AIRPODS 4</h3>
-                    <img src="path/to/airpods4.jpg" alt="AirPods 4" class="product-image">
-                    <p>Opis: Doživite naslednjo raven zvoka z AirPods 4. Z izboljšano kakovostjo zvoka in brezskrbno povezljivostjo.</p>
-                    <p class="price">Cena: €109.99</p>
-                    <button>Dodaj v Košarico</button>
-                </div>
-                <div class="product">
-                    <h3 class="blue-text">Armani Acqua di Gio</h3>
-                    <img src="path/to/acqua-di-gio.jpg" alt="Armani Acqua di Gio" class="product-image">
-                    <p>Opis: Armani Acqua di Gio je
+            <h1>𝒜𝓇𝑜𝓂𝒶 𝒾𝓃 𝒜𝓋𝒹𝒾𝑜
