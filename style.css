@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9; /* Svetla ozadje */
+    background-color: #f9f9f9; /* Light background */
 }
 
 .container {
@@ -14,7 +14,7 @@ body {
 }
 
 header {
-    background: #2c3e50; /* Temno modra barva */
+    background: linear-gradient(135deg, #2c3e50, #34495e); /* Gradient for header */
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
@@ -23,7 +23,13 @@ header {
 
 header h1 {
     margin: 0;
-    font-size: 2.5em; /* Večja velikost naslova */
+    font-size: 2.5em; /* Larger title size */
+    animation: colorChange 3s infinite alternate; /* Animation for title */
+}
+
+@keyframes colorChange {
+    0% { color: #add8e6; } /* Light blue */
+    100% { color: #ffffff; } /* White */
 }
 
 nav ul {
@@ -40,31 +46,31 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
-    transition: color 0.3s; /* Prehod barve */
+    transition: color 0.3s; /* Color transition */
 }
 
 nav ul li a:hover {
-    color: #1abc9c; /* Barva ob hoverju */
+    color: #1abc9c; /* Color on hover */
 }
 
 main {
     padding: 20px;
-    background: #ffffff; /* Bela ozadje */
+    background: #ffffff; /* White background */
     border-radius: 8px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
-    color: #34495e; /* Temno siva barva */
-    border-bottom: 2px solid #1abc9c; /* Podčrtana črta */
+    color: #34495e; /* Dark gray color */
+    border-bottom: 2px solid #1abc9c; /* Underline */
     padding-bottom: 10px;
     margin-bottom: 20px;
 }
 
 .product-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Fleksibilna mreža */
-    gap: 20px; /* Razmik med izdelki */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Flexible grid */
+    gap: 20px; /* Space between products */
 }
 
 .product {
@@ -72,13 +78,13 @@ h2 {
     border-radius: 8px;
     padding: 15px;
     text-align: center;
-    transition: transform 0.3s; /* Prehod pri hoverju */
-    background-color: #fefefe; /* Svetlo ozadje izdelka */
+    transition: transform 0.3s; /* Hover transition */
+    background-color: #fefefe; /* Light product background */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .product:hover {
-    transform: translateY(-5px); /* Rahlo dvigovanje pri hoverju */
+    transform: translateY(-5px); /* Slight lift on hover */
 }
 
 .product-image {
@@ -88,32 +94,44 @@ h2 {
 }
 
 .price {
-    font-size: 1.2em; /* Večja velikost cene */
-    color: #e74c3c; /* Rdeča barva za ceno */
+    font-size: 1.2em; /* Larger price size */
+    color: #e74c3c; /* Red color for price */
     margin: 10px 0;
 }
 
 button {
-    background-color: #1abc9c; /* Barva gumba */
+    background-color: #1abc9c; /* Button color */
     color: white;
     border: none;
     padding: 10px 15px;
     cursor: pointer;
     border-radius: 5px;
     font-size: 1em;
-    transition: background-color 0.3s; /* Prehod barve gumba */
+    transition: background-color 0.3s; /* Button color transition */
 }
 
 button:hover {
-    background-color: #16a085; /* Temnejša barva ob hoverju */
+    background-color: #16a085; /* Darker color on hover */
 }
 
 footer {
     text-align: center;
     padding: 20px 0;
-    background: #2c3e50; /* Temno modra barva */
+    background: #2c3e50; /* Dark blue color */
     color: #ffffff;
     position: relative;
     bottom: 0;
     width: 100%;
+}
+
+/* Additional styles for responsiveness */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em; /* Smaller title size on mobile */
+    }
+
+    nav ul li {
+        display: block; /* Stack navigation items on mobile */
+        margin: 10px 0; /* Space between items */
+    }
 }
