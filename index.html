@@ -7,22 +7,47 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Welcome to WHATEVER HAPPENS game site!</h1>
-        <p>BUSSINES BUSSINES, trying to sell a cebab for a living here!! :)    BEST MUSIC : https://soundcloud.com/officer-sideways/heartstringz-ofuk-bounce-remix?utm_source=clipboard&utm_campaign=wtshare&utm_medium=widget&utm_content=https%253A%252F%252Fsoundcloud.com%252Fofficer-sideways%252Fheartstringz-ofuk-bounce-remix ,   https://music.youtube.com/watch?v=6DcinsRPR5s&si=WcvYYAWsRNMDJ2AG  </p>
+    <header>
+        <div class="container">
+            <h1>Welcome to WHATEVER HAPPENS Game Site!</h1>
+            <nav>
+                <ul>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#ideas">Send Ideas</a></li>
+                    <li><a href="#music">Best Music</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
 
-        <!-- Form to submit ideas -->
-        <h2>Send Us Your Ideas!</h2>
-        <form action="your-email-or-script" method="post">
-            <label for="name">Your Name:</label>
-            <input type="text" id="name" name="name" required>
+    <main class="container">
+        <section id="about">
+            <h2>About Us</h2>
+            <p>We are passionate about gaming and bringing you the best experiences. Check out our offerings!</p>
+        </section>
 
-            <label for="message">Your Idea: (English)</label>
-            <textarea id="message" name="message" rows="4" required></textarea>
+        <section id="music">
+            <h2>Best Music</h2>
+            <p>Enjoy our curated music selections:</p>
+            <ul>
+                <li><a href="https://soundcloud.com/officer-sideways/heartstringz-ofuk-bounce-remix?utm_source=clipboard&utm_campaign=wtshare&utm_medium=widget&utm_content=https%253A%252F%252Fsoundcloud.com%252Fofficer-sideways%252Fheartstringz-ofuk-bounce-remix" target="_blank">Heartstringz Remix</a></li>
+                <li><a href="https://music.youtube.com/watch?v=6DcinsRPR5s&si=WcvYYAWsRNMDJ2AG" target="_blank">YouTube Music</a></li>
+            </ul>
+        </section>
 
-            <input type="submit" value="Submit">
-        </form>
-    </div>
+        <section id="ideas">
+            <h2>Send Us Your Ideas!</h2>
+            <form action="your-email-or-script" method="post">
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="message">Your Idea: (English)</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+    </main>
 
     <!-- Disqus comments section -->
     <div id="disqus_thread"></div>
@@ -38,5 +63,9 @@
         Please enable JavaScript to view the
         <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
     </noscript>
+
+    <footer>
+        <p>&copy; 2025 WHATEVER HAPPENS. All rights reserved.</p>
+    </footer>
 </body>
 </html>
