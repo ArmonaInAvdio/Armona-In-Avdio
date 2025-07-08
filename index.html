@@ -16,6 +16,21 @@
             font-size: 24px; /* Adjust size as needed */
         }
     </style>
+    <script>
+        // Initialize an empty cart
+        let cart = [];
+
+        // Function to add product to cart
+        function addToCart(productName, productPrice) {
+            const product = {
+                name: productName,
+                price: productPrice
+            };
+            cart.push(product);
+            alert(`${productName} je bil dodan v košarico!`);
+            console.log(cart); // For debugging: view the cart in the console
+        }
+    </script>
 </head>
 <body>
     <header>
@@ -51,15 +66,4 @@
             </div>
         </section>
         <section id="contact">
-            <h2>Kontaktirajte Nas</h2>
-            <h2>SNAPCHAT: majk_products 
-                <a href="https://www.snapchat.com/add/majk_products" target="_blank" aria-label="Snapchat" class="social-icons">
-                    <i class="fab fa-snapchat-ghost"></i>
-                </a>
-            </h2>
-            <h2>INSTAGRAM: Good_productsSLO 
-                <a href="https://www.instagram.com/Good_productsSLO" target="_blank" aria-label="Instagram" class="social-icons">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </h2>
-            <p>&copy; SLO_POCENI_KVALITETNI_PRODUK
+            <h2>Kontaktirajte Nas</h2
