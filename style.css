@@ -24,12 +24,15 @@ header {
 header h1 {
     margin: 0;
     font-size: 2.5em; /* Larger title size */
-    animation: colorChange 2s infinite alternate; /* Animation for title */
+    animation: colorChange 8s infinite alternate; /* Animation for title */
 }
 
 @keyframes colorChange {
     0% { color: #add8e6; } /* Light blue */
-    100% { color: #90ee90; } /* Light green */
+    25% { color: #90ee90; } /* Light green */
+    50% { color: #ffcccb; } /* Light red */
+    75% { color: #ffffe0; } /* Light yellow */
+    100% { color: #d8bfd8; } /* Chrome violet */
 }
 
 nav ul {
