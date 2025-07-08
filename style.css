@@ -3,7 +3,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f9f9f9; /* Svetla ozadje */
 }
 
 .container {
@@ -14,14 +14,16 @@ body {
 }
 
 header {
-    background: #35424a;
+    background: #2c3e50; /* Temno modra barva */
     color: #ffffff;
     padding: 20px 0;
     text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     margin: 0;
+    font-size: 2.5em; /* Večja velikost naslova */
 }
 
 nav ul {
@@ -38,14 +40,80 @@ nav ul li a {
     color: #ffffff;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s; /* Prehod barve */
 }
 
 nav ul li a:hover {
-    text-decoration: underline;
+    color: #1abc9c; /* Barva ob hoverju */
 }
 
 main {
     padding: 20px;
-    background: #ffffff;
+    background: #ffffff; /* Bela ozadje */
     border-radius: 8px;
-    box-shadow: 0 0 10px
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #34495e; /* Temno siva barva */
+    border-bottom: 2px solid #1abc9c; /* Podčrtana črta */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Fleksibilna mreža */
+    gap: 20px; /* Razmik med izdelki */
+}
+
+.product {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s; /* Prehod pri hoverju */
+    background-color: #fefefe; /* Svetlo ozadje izdelka */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.product:hover {
+    transform: translateY(-5px); /* Rahlo dvigovanje pri hoverju */
+}
+
+.product-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.price {
+    font-size: 1.2em; /* Večja velikost cene */
+    color: #e74c3c; /* Rdeča barva za ceno */
+    margin: 10px 0;
+}
+
+button {
+    background-color: #1abc9c; /* Barva gumba */
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: background-color 0.3s; /* Prehod barve gumba */
+}
+
+button:hover {
+    background-color: #16a085; /* Temnejša barva ob hoverju */
+}
+
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #2c3e50; /* Temno modra barva */
+    color: #ffffff;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
