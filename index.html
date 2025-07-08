@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WHATEVER HAPPENS - Game Site</title>
+    <title>WHATEVER HAPPENS - Online Store</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Welcome to WHATEVER HAPPENS Game Site!</h1>
+            <h1>Welcome to WHATEVER HAPPENS Online Store!</h1>
             <nav>
                 <ul>
                     <li><a href="#about">About</a></li>
+                    <li><a href="#products">Products</a></li>
                     <li><a href="#ideas">Send Ideas</a></li>
                     <li><a href="#music">Best Music</a></li>
                 </ul>
@@ -26,13 +27,20 @@
             <p>We are passionate about gaming and bringing you the best experiences. Check out our offerings!</p>
         </section>
 
-        <section id="music">
-            <h2>Best Music</h2>
-            <p>Enjoy our curated music selections:</p>
-            <ul>
-                <li><a href="https://soundcloud.com/officer-sideways/heartstringz-ofuk-bounce-remix?utm_source=clipboard&utm_campaign=wtshare&utm_medium=widget&utm_content=https%253A%252F%252Fsoundcloud.com%252Fofficer-sideways%252Fheartstringz-ofuk-bounce-remix" target="_blank">Heartstringz Remix</a></li>
-                <li><a href="https://music.youtube.com/watch?v=6DcinsRPR5s&si=WcvYYAWsRNMDJ2AG" target="_blank">YouTube Music</a></li>
-            </ul>
+        <section id="products">
+            <h2>Our Products</h2>
+            <div class="product">
+                <h3>AirPods 4</h3>
+                <img src="path/to/airpods4.jpg" alt="AirPods 4" class="product-image">
+                <p>Price: €199.99</p>
+                <button>Add to Cart</button>
+            </div>
+            <div class="product">
+                <h3>Armani Acqua di Gio</h3>
+                <img src="path/to/acqua-di-gio.jpg" alt="Armani Acqua di Gio" class="product-image">
+                <p>Price: €89.99</p>
+                <button>Add to Cart</button>
+            </div>
         </section>
 
         <section id="ideas">
@@ -48,21 +56,6 @@
             </form>
         </section>
     </main>
-
-    <!-- Disqus comments section -->
-    <div id="disqus_thread"></div>
-    <script>
-        (function () {
-            var d = document, s = d.createElement('script');
-            s.src = 'https://whatever-happens.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        })();
-    </script>
-    <noscript>
-        Please enable JavaScript to view the
-        <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a>
-    </noscript>
 
     <footer>
         <p>&copy; 2025 WHATEVER HAPPENS. All rights reserved.</p>
