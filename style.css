@@ -1,83 +1,62 @@
-/* General body styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-image: url('https://preview.redd.it/kpihzidzce941.jpg?auto=webp&s=49b529606cd92d7063a5a457232c3fcf492895fa');
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-    color: #f0f0f0;
+    background-color: #f4f4f4;
 }
 
-/* Main content box on the left */
 .container {
-    max-width: 600px;
-    padding: 40px;
-    background-color: rgba(0, 0, 0, 0.6);
-    margin: 50px 0 50px 50px; /* pushes it from the top and left */
-    border-radius: 15px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
 }
 
-/* Header */
-h1 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    color: #00ffcc;
+header {
+    background: #35424a;
+    color: #ffffff;
+    padding: 20px 0;
 }
 
-/* Paragraph intro text */
-p {
-    font-size: 1.1em;
-    line-height: 1.6;
-    margin-bottom: 30px;
+header h1 {
+    text-align: center;
 }
 
-/* Form styles */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+main {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #35424a;
+}
+
 form {
     display: flex;
     flex-direction: column;
 }
 
-label {
-    font-size: 1.1em;
-    margin-bottom: 8px;
-    text-align: left;
+form label {
+    margin: 10px 0 5px;
 }
 
-input[type="text"],
-textarea {
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    font-size: 1em;
-    background-color: #222;
-    color: #fff;
-    outline: none;
-}
-
-/* Submit button */
-input[type="submit"] {
-    background-color: #00cc99;
-    color: white;
-    font-size: 1.1em;
-    padding: 12px;
-    border: none;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-input[type="submit"]:hover {
-    background-color: #009977;
-}
-
-/* Disqus thread style */
-#disqus_thread {
-    margin: 50px;
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 20px;
-    border-radius: 15px;
-}
+form input[type="text"],
+form textarea {
+    padding: 
