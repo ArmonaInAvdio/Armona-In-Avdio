@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="sl">
 <head>
     <meta charset="UTF-8">
@@ -7,71 +8,60 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        .blue-text {
-            color: black; /* Črna barva */
+        .blue-text { 
+            color: black; /* Črna barva */ 
         }
-        .social-icons {
-            display: inline; /* Keep icons inline with text */
-            margin-left: 10px; /* Space between text and icon */
-            font-size: 24px; /* Adjust size as needed */
+        .social-icons { 
+            display: inline; /* Keep icons inline with text */ 
+            margin-left: 10px; /* Space between text and icon */ 
+            font-size: 24px; /* Adjust size as needed */ 
         }
     </style>
+    <script>
+        function addToCart(productName, price) {
+            // This function will be called when the button is clicked
+            console.log(`Dodano v košarico: ${productName} - Cena: €${price.toFixed(2)}`);
+            alert(`${productName} je bil dodan v košarico!`);
+        }
+    </script>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1> [       𝒜𝓇𝑜𝓂𝒶 𝒾𝓃 𝒜𝓋𝒹𝒾𝑜        ]</h1>
+            <h1>[ 𝒜𝓇𝑜𝓂𝒶 𝒾𝓃 𝒜𝓋𝒹𝒾𝑜 ]</h1>
             <nav>
                 <ul>
-                    
+                    <li><a href="#about">O Nas</a></li>
+                    <li><a href="#products">Naši Izdelki</a></li>
+                    <li><a href="#contact">Kontaktirajte Nas</a></li>
                 </ul>
             </nav>
         </div>
     </header>
-
     <main class="container">
         <section id="about">
             <h2>O Nas</h2>
             <p>Dobrodošli v naši spletni trgovini! Ponujamo najnovejše tehnološke naprave in luksuzne dišave.</p>
         </section>
-
         <section id="products">
             <h2>Naši Izdelki</h2>
             <div class="product-grid">
                 <div class="product">
-    <h3>AIRPODS 4</h3>
-    <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-4-hero-select-202409?wid=976&hei=916&fmt=jpeg&qlt=90&.v=NFNYUnZEZG9WdmVKZzdXRW9IVzNoQVV5N29UUE5sYkU5bzFjbnV4MlZFL2kyVU55U21PWTMyajVGNTlWWnhwak14MXJScFRZN3Y5OWZsRXVrN1k4cFZyQ2FPOWYvcVVkNFcyRXFtUGhFUW8" alt="AirPods 4" class="product-image">
-    <p>Opis: Doživite naslednjo raven zvoka z AirPods 4. Z izboljšano kakovostjo zvoka in brezskrbno povezljivostjo.</p>
-    <p class="price">Cena: €89.99</p>
-    <button onclick="addToCart('AirPods 4', 89.99)">Dodaj v Košarico</button>
-</div>
-
+                    <h3>AIRPODS 4</h3>
+                    <img src="https://store.storeimages.cdn-apple.com/1/as-images.apple.com/is/airpods-4-hero-select-202409?wid=976&hei=916&fmt=jpeg&qlt=90&.v=NFNYUnZEZG9WdmVKZzdXRW9IVzNoQVV5N29UUE5sYkU5bzFjbnV4MlZFL2kyVU55U21PWTMyajVGNTlWWnhwak14MXJScFRZN3Y5OWZsRXVrN1k4cFZyQ2FPOWYvcVVkNFcyRXFtUGhFUW8" 
+                         alt="AirPods 4" class="product-image">
+                    <p>Opis: Doživite naslednjo raven zvoka z AirPods 4. Z izboljšano kakovostjo zvoka in brezskrbno povezljivostjo.</p>
+                    <p class="price">Cena: €89.99</p>
+                    <button onclick="addToCart('AirPods 4', 89.99)">Dodaj v Košarico</button>
+                </div>
                 <div class="product">
-    <h3 class="blue-text">Armani Acqua di Gio</h3>
-    <img src="images/acqua-di-gio.jpg" alt="Armani Acqua di Gio" class="product-image" width="976" height="916">
-    <p>Opis: Armani Acqua di Gio je osvežujoča dišava, ki uteleša bistvo morja. Popolna za vsako priložnost.</p>
-    <p class="price">Cena: €92.99</p>
-    <button onclick="window.location.href='cart.html'">Dodaj v Košarico</button>
-</div>
-
-
+                    <h3 class="blue-text">Armani Acqua di Gio</h3>
+                    <img src="https://assets.armani.com/image/upload/f_auto,q_auto:best,ar_4:5,w_1350,c_fill/LE311500_NLP_100ML_F_FW2025.jpg" 
+                         alt="Armani Acqua di Gio" class="product-image">
+                    <p>Opis: Armani Acqua di Gio je osvežujoča dišava, ki uteleša bistvo morja. Popolna za vsako priložnost.</p>
+                    <p class="price">Cena: €92.99</p>
+                    <button onclick="addToCart('Armani Acqua di Gio', 92.99)">Dodaj v Košarico</button>
+                </div>
             </div>
         </section>
-
-        <section id="contact">
-            <h2>Kontaktirajte Nas</h2>
-            <h2>SNAPCHAT: majk_products 
-                <a href="https://www.snapchat.com/add/majk_products" target="_blank" aria-label="Snapchat" class="social-icons">
-                    <i class="fab fa-snapchat-ghost"></i>
-                </a>
-            </h2>
-            <h2>INSTAGRAM: Good_productsSLO 
-                <a href="https://www.instagram.com/Good_productsSLO" target="_blank" aria-label="Instagram" class="social-icons">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </h2>
-            <p>&copy; SLO_POCENI_KVALITETNI_PRODUKTI. Vse pravice pridržane.</p>
-        </section>
-    </main>
-</body>
-</html>
+        <section id="contact
