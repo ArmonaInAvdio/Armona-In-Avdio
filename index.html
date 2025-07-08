@@ -15,20 +15,78 @@
             margin-left: 10px; /* Space between text and icon */
             font-size: 24px; /* Adjust size as needed */
         }
+        .cart-icon {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 24px;
+            cursor: pointer;
+        }
+        .form-container {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        .overlay {
+            display: none; /* Hidden by default */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
     </style>
     <script>
-        // Initialize an empty cart
-        let cart = [];
+        // Function to show the form
+        function showForm() {
+            document.getElementById('formContainer').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
 
-        // Function to add product to cart
-        function addToCart(productName, productPrice) {
-            const product = {
-                name: productName,
-                price: productPrice
+        // Function to hide the form
+        function hideForm() {
+            document.getElementById('formContainer').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        // Function to handle form submission
+        function submitForm(event) {
+            event.preventDefault(); // Prevent default form submission
+            const formData = new FormData(event.target);
+            const data = {
+                address: formData.get('address'),
+                street: formData.get('street'),
+                email: formData.get('email'),
+                phone: formData.get('phone')
             };
-            cart.push(product);
-            alert(`${productName} je bil dodan v košarico!`);
-            console.log(cart); // For debugging: view the cart in the console
+
+            // Send data to your email (this part requires a backend)
+            fetch('https://your-backend-endpoint.com/send-email', {
+                method: 'POST',
+                body: JSON.stringify(data),
+                headers: {
+                    'Content-Type': 'application/json'
+                }
+            })
+            .then(response => {
+                if (response.ok) {
+                    alert('Vaši podatki so bili poslani!');
+                    hideForm();
+                } else {
+                    alert('Prišlo je do napake pri pošiljanju podatkov.');
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+            });
         }
     </script>
 </head>
@@ -39,11 +97,17 @@
             <nav>
                 <ul></ul>
             </nav>
+            <i class="fas fa-shopping-cart cart-icon" onclick="showForm()"></i>
         </div>
     </header>
     <main class="container">
         <section id="about">
             <h2>O Nas</h2>
+            <p>Dobrodošli v naši spletni trgovini! Ponujamo najnovejše tehnološke naprave in luksuzne dišave.</p>
+        </section>
+        <section id="products">
+           
+
             <p>Dobrodošli v naši spletni trgovini! Ponujamo najnovejše tehnološke naprave in luksuzne dišave.</p>
         </section>
         <section id="products">
