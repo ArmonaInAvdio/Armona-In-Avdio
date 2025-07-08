@@ -7,8 +7,69 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
+        body {
+            background-color: #f0f8ff; /* Light background color */
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e90ff, #4682b4); /* Gradient from light to dark blue */
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px; /* Optional: rounded corners */
+        }
+
+        h1 {
+            color: white; /* Text color */
+            font-family: 'Roboto', sans-serif; /* Font style */
+            font-size: 2.5em; /* Font size */
+            animation: colorChange 3s infinite alternate; /* Animation for color change */
+        }
+
+        @keyframes colorChange {
+            0% { color: #add8e6; } /* Light blue */
+            100% { color: #ffffff; } /* White */
+        }
+
         .blue-text {
             color: black; /* Črna barva */
+        }
+
+        nav ul {
+            list-style-type: none; /* Remove bullet points */
+            padding: 0; /* Remove padding */
+        }
+
+        nav ul li {
+            display: inline; /* Display list items in a row */
+            margin: 0 15px; /* Space between items */
+        }
+
+        nav ul li a {
+            text-decoration: none; /* Remove underline from links */
+            color: white; /* Link color */
+        }
+
+        .product-grid {
+            display: flex; /* Use flexbox for product layout */
+            gap: 20px; /* Space between products */
+            flex-wrap: wrap; /* Allow wrapping to next line */
+        }
+
+        .product {
+            border: 1px solid #ccc; /* Border around products */
+            border-radius: 5px; /* Rounded corners */
+            padding: 10px; /* Padding inside product */
+            text-align: center; /* Center text */
+            background-color: #fff; /* White background for products */
+        }
+
+        .product-image {
+            max-width: 100%; /* Responsive image */
+            height: auto; /* Maintain aspect ratio */
+        }
+
+        .price {
+            font-weight: bold; /* Bold price text */
         }
     </style>
 </head>
@@ -45,18 +106,4 @@
                 <div class="product">
                     <h3 class="blue-text">Armani Acqua di Gio</h3>
                     <img src="path/to/acqua-di-gio.jpg" alt="Armani Acqua di Gio" class="product-image">
-                    <p>Opis: Armani Acqua di Gio je osvežujoča dišava, ki uteleša bistvo morja. Popolna za vsako priložnost.</p>
-                    <p class="price">Cena: €89.99</p>
-                    <button>Dodaj v Košarico</button>
-                </div>
-            </div>
-        </section>
-
-        <section id="contact">
-            <h2>Kontaktirajte Nas SNAPCHAT In INSTAGRAM</h2>
-            <h2>majk_products  in  Good_productsSLO</h2>
-            <p>&copy; SLO_POCENI_KVALITETNI_PRODUKTI. Vse pravice pridržane.</p>
-        </section>
-    </main>
-</body>
-</html>
+                    <p>Opis: Armani Acqua di Gio je
